@@ -1,0 +1,36 @@
+body{
+	background-image: url("<?php echo base_url();?>img/background3.jpg");
+	background-position: fixed;
+}
+
+#sidebar {
+	float: left;
+	width: 15%;
+	height: 90%;
+	background-color: #d8eaec;
+	padding: 5px;
+	margin-left: 35px;
+	margin-top: 10px;
+	border: 2px dashed black;
+	border-radius: 2px;
+}
+
+#inner{
+	float: right;
+	padding: 5px;
+	padding-right: 50px;
+	width: 81%;
+}
+
+.jumbotron{
+	background-color: #d8eaec;
+	font-family: cursive;
+}
+
+.jumbotron{
+	border-radius: 20px;
+}
+
+li{
+	padding: 10px;
+}
