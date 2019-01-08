@@ -5,7 +5,7 @@ class Input_barang extends CI_Controller {
 
 	public function index()
 	{
-		$data['barang'] = $this->m_input_barang->ambil_siswa()->result();
+		// $data['barang'] = $this->m_input_barang->ambil_siswa()->result();
 
 		$this->load->view('layout/header-2');
 
@@ -38,6 +38,40 @@ class Input_barang extends CI_Controller {
 			);
 		$this->m_input_barang->input_data($data,'barang');
 		redirect('belajar/index');
+	}
+
+	function hapus($id)
+	{
+		$where = array('id' => $id);
+		$this->m_input_barang->hapus_data($where,'barang');
+		redirect('belajar/index');
+	}
+
+	function edit($id)
+	{
+		$where = array('id' => $id);
+		$data['barang'] = $this->m_input_barang->edit_data($where,'barang')->result();
+		$this->load->view('v_edit_barang',$data);
+	}
+
+	function update()
+	{
+		$kode_barang = $this->input->post('kode_barang');
+		$nama_barang = $this->input->post('nama_barang');
+		$jumlah_barang = $this->input->post('jumlah_barang');
+	 
+		$data = array(
+			'kode_barang' => $kode_barang,
+			'nama_barang' => $nama_barang,
+			'jumlah_barang' => $jumlah_barang
+		);
+	 
+		$where = array(
+			'id' => $id
+		);
+	 
+		$this->m_input_barang->update_data($where,$data,'barang');
+		redirect('Input_barang/index');
 	}
 
 

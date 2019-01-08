@@ -4,12 +4,12 @@
 	<center>
 		<table border="0" style="padding-top:100px;">
 			<tr>
-				<th style="padding:40px; text-align: left;">No</th>
-				<th style="padding:40px; text-align: left;">NIS Siswa</th>
-				<th style="padding:40px; text-align: left;">Nama Siswa</th>
-				<th style="padding:40px; text-align: left;">Kelas</th>
-				<th style="padding:40px; text-align: left;">Jurusan</th>
-				<th style="padding:40px; text-align: left; padding-left: 10px; ">Action</th>
+				<th style="padding:40px; text-align: center;">No</th>
+				<th style="padding:40px; text-align: center;">NIS Siswa</th>
+				<th style="padding:40px; text-align: center;">Nama Siswa</th>
+				<th style="padding:40px; text-align: center;">Kelas</th>
+				<th style="padding:40px; text-align: center;">Jurusan</th>
+				<th style="padding:40px; text-align: center; padding-left: 10px;">Action</th>
 			</tr>
 			<?php $no=1; foreach($siswa as $u){ ?>
 			<tr>
@@ -19,8 +19,8 @@
 				<td style="text-align: center; padding-bottom: 30px;"><?php echo $u->kelas ?></td>
 				<td style="text-align: center; padding-bottom: 30px;"><?php echo $u->jurusan ?></td>
 				<td >
-					<?php echo anchor('belajar/edit/'.$u->id,'Edit'); ?>
-                    <?php echo anchor('belajar/hapus/'.$u->id,'Hapus'); ?>
+					<?php echo anchor('input_siswa/edit/'.$u->id,'<button type="button" class="btn btn-primary"><i class="fa fa-edit" > Edit</i> <i class="fa fa-edit"></i></button>'); ?>
+                    <?php echo anchor('input_siswa/hapus/'.$u->id,'<button type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Hapus <i class="fa fa-trash"> </i></button>'); ?>
 				</td>
 			</tr>
 			<?php } ?>

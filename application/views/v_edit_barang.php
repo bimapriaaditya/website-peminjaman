@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tugas Bootstrap</title>
+	<title>Edit</title>
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.min.css" >
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="<?php echo base_url();?>style/style.css">
@@ -61,3 +61,35 @@
 	</div>
 	<hr>
 </head>
+<body style="background-color: #eaf8fb">
+	<div>&nbsp;</div>
+	<div style="padding: 50px;">
+	<div class="jumbotron" style="height: 700px;">
+	 	<h1 class="display-4">Masukan Data Barang!</h1>
+	  	<p class="lead">Isi Form Yang tersedia Untuk Meng Edit Data Yang Sudah Ada!</p>
+	  	<hr class="my-4">
+	  	<?php foreach ($barang as $b) { ?>
+	  	}
+	  	<form action="<?php echo site_url(). 'input_barang/update'; ?>" method="post">
+	  		<label><b>Masukan Kode Barang! :</b></label>
+	  		<input class="form-control" name="kode_barang" type="text" value="<?php echo $b->kode_barang ?>">
+	  		<div>&nbsp;</div>
+
+	  		<label><b>Masukan Nama Barang! :</b></label>
+	  		<input class="form-control" name="nama_barang" type="text" value="<?php echo $u->nama_barang ?>">
+	  		<div>&nbsp;</div>
+
+	  		<label><b>Jumlah Barang! :</b></label>
+	  		<input class="form-control" name="jumlah_barang" type="text" value="<?php echo $u->jumlah_barang ?>">
+	  		<div>&nbsp;</div>
+
+	  		<input type="submit" value="Simpan" type="" class="btn btn-primary btn-lg">
+	  	</form>
+	  	<?php } ?>
+	</div>
+	</div>
+
+</body>
+<script src="<?php echo base_url();?>assets/jquery/jquery.min.js" ></script>
+<script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.min.js" ></script>
+</html>

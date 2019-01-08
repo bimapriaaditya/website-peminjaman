@@ -8,17 +8,17 @@
 				<th style="padding:30px; text-align: left;">Kode Barang</th>
 				<th style="padding:30px; text-align: left;">Nama Barang</th>
 				<th style="padding:30px; text-align: left;">Jumlah Barang</th>
-				<th style="padding:30px; text-align: left;">Action</th>
+				<th style="padding:30px; text-align: center;">Action</th>
 			</tr>
 			<?php $no=1; foreach($barang as $u){ ?>
 			<tr>
-				<td style="text-align: center; padding-bottom: 10px;"><?php echo $no++ ?></td>
-				<td style="text-align: center; padding-bottom: 10px;"><?php echo $u->kode_barang ?></td>
-				<td style="text-align: center; padding-bottom: 10px;"><?php echo $u->nama_barang ?></td>
-				<td style="text-align: center; padding-bottom: 10px;"><?php echo $u->jumlah_barang ?></td>
+				<td style="text-align: center; padding-bottom: 30px;"><?php echo $no++ ?></td>
+				<td style="text-align: center; padding-bottom: 30px;"><?php echo $u->kode_barang ?></td>
+				<td style="text-align: center; padding-bottom: 30px;"><?php echo $u->nama_barang ?></td>
+				<td style="text-align: center; padding-bottom: 30px;"><?php echo $u->jumlah_barang ?></td>
 				<td>
-					<?php echo anchor('crud/edit/'.$u->id,'Edit'); ?>
-                              <?php echo anchor('crud/hapus/'.$u->id,'Hapus'); ?>
+					<?php echo anchor('input_barang/edit/'.$u->id,'<button type="button" class="btn btn-primary"><i class="fa fa-edit" > Edit</i> <i class="fa fa-edit"></i></button>'); ?>
+                    <?php echo anchor('input_barang/hapus/'.$u->id,'<button type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Hapus <i class="fa fa-trash"> </i></button>'); ?>
 				</td>
 			</tr>
 			<?php } ?>

@@ -1,4 +1,4 @@
-<?php 
+<!-- <?php 
  
 class M_data extends CI_Model
 {
@@ -12,4 +12,4 @@ class M_data extends CI_Model
 		$this->db->insert($table,$data);
 	}*/
 }
-?>	
+?>	 -->

@@ -10,6 +10,12 @@ class M_input_siswa extends CI_Model
 	{
 		$this->db->insert($table,$data);
 	}
+
+	function hapus_siswa($where,$table)
+	{
+		$this->db->where($where);
+		$this->db->delete($table);
+	}
 }
 
 ?>

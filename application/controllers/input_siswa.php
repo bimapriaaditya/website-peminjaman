@@ -40,5 +40,12 @@ class Input_siswa extends CI_Controller {
 		$this->m_input_siswa->input_data($data,'siswa');
 		redirect('siswa/index');
 	}
+
+	function hapus($id)
+	{
+		$where = array('id' => $id);
+		$this->m_input_siswa->hapus_siswa($where,'siswa');
+		redirect('siswa/index');
+	}
 }
 ?>
