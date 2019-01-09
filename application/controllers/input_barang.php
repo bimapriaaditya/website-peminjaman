@@ -67,11 +67,11 @@ class Input_barang extends CI_Controller {
 		);
 	 
 		$where = array(
-			'id' => $id
+			'kode_barang' => $kode_barang
 		);
 	 
 		$this->m_input_barang->update_data($where,$data,'barang');
-		redirect('Input_barang/index');
+		redirect('belajar/index');	
 	}
 
 

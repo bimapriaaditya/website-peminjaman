@@ -21,25 +21,5 @@ class Belajar extends CI_Controller {
 
 		$this->load->view('layout/footer-2');
 	}
-
-	// function tambah(){
-	// 	$this->load->view('v_input');
-	// }
-
-	// function tambah_aksi(){
-	// 	$id = $this->input->post('id');
-	// 	$kode_barang = $this->input->post('kode_barang');
-	// 	$nama_barang = $this->input->post('nama_barang');
-	// 	$jumlah_barang = $this->input->post('jumlah_barang');
-	// }
-	// $data = array(
-	// 		'id' => $id,
-	// 		'kode_barang' => $kode_barang,
-	// 		'nama_barang' => $nama_barang,
-	// 		'jumlah_barang' => $jumlah_barang,
-	// 		);
-	// 	$this->m_data->input_data($data,'barang');
-	// 		redirect('belajar/index');
-
 }
 ?>

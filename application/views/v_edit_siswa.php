@@ -65,23 +65,28 @@
 	<div>&nbsp;</div>
 	<div style="padding: 50px;">
 	<div class="jumbotron" style="height: 700px;">
-	 	<h1 class="display-4">Masukan Data Barang!</h1>
+	 	<h1 class="display-4">Masukan Data Edit Siswa!</h1>
 	  	<p class="lead">Isi Form Yang tersedia Untuk Meng Edit Data Yang Sudah Ada!</p>
 	  	<hr class="my-4">
-	  	<?php foreach ($barang as $b) { ?>
+	  	<?php foreach ($siswa as $s) { ?>
 	  	
-	  	<form action="<?php echo site_url(). '/input_barang/update'; ?>" method="post">
-	  		<label><b>Masukan Kode Barang! :</b></label>
-	  		<input class="form-control" name="kode_barang" type="text" value="<?php echo $b->kode_barang ?>">
+	  	<form action="<?php echo site_url(). '/input_siswa/update'; ?>" method="post">
+	  		<label><b>Masukan NIS Siswa! :</b></label>
+	  		<input class="form-control" name="nis_siswa" type="text" value="<?php echo $s->nis_siswa ?>">
 	  		<div>&nbsp;</div>
 
-	  		<label><b>Masukan Nama Barang! :</b></label>
-	  		<input class="form-control" name="nama_barang" type="text" value="<?php echo $b->nama_barang ?>">
+	  		<label><b>Masukan Nama Siswa! :</b></label>
+	  		<input class="form-control" name="nama" type="text" value="<?php echo $s->nama ?>">
 	  		<div>&nbsp;</div>
 
-	  		<label><b>Jumlah Barang! :</b></label>
-	  		<input class="form-control" name="jumlah_barang" type="text" value="<?php echo $b->jumlah_barang ?>">
+	  		<label><b>Masukan Kelas Siswa! :</b></label>
+	  		<input class="form-control" name="kelas" type="text" value="<?php echo $s->kelas ?>">
 	  		<div>&nbsp;</div>
+
+	  		<label><b>Masukan Jurusan Siswa! :</b></label>
+	  		<input class="form-control" name="jurusan" type="text" value="<?php echo $s->jurusan ?>">
+	  		<div>&nbsp;</div>
+
 
 	  		<input type="submit" value="Simpan" type="" class="btn btn-primary btn-lg">
 	  	</form>

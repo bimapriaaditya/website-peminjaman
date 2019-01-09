@@ -47,5 +47,34 @@ class Input_siswa extends CI_Controller {
 		$this->m_input_siswa->hapus_siswa($where,'siswa');
 		redirect('siswa/index');
 	}
+
+	function edit($id)
+	{
+		$where = array('id' => $id);
+		$data['siswa'] = $this->m_input_siswa->edit_data($where,'siswa')->result();
+		$this->load->view('v_edit_siswa',$data);
+	}
+
+	function update()
+	{
+		$nis_siswa = $this->input->post('nis_siswa');
+		$nama = $this->input->post('nama');
+		$kelas = $this->input->post('kelas');
+		$jurusan = $this->input->post('jurusan');
+	 
+		$data = array(
+			'nis_siswa' => $nis_siswa,
+			'nama' => $nama,
+			'kelas' => $kelas,
+			'jurusan' => $jurusan
+		);
+	 
+		$where = array(
+			'nis_siswa' => $nis_siswa
+		);
+	 
+		$this->m_input_siswa->update_data($where,$data,'siswa');
+		redirect('siswa/index');	
+	}
 }
 ?>

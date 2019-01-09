@@ -22,7 +22,8 @@ class M_input_barang extends CI_Model{
 		return $this->db->get_where($table,$where);
 	}
 
-	function update_data($where,$data,$table){
+	function update_data($where,$data,$table)
+	{
 		$this->db->where($where);
 		$this->db->update($table,$data);
 	}	
